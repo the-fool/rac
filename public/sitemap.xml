@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://the-fool.github.io/rac/</loc>
+    <loc>http://the-fool.github.io/rac/public/</loc>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/about/</loc>
+    <loc>http://the-fool.github.io/rac/public/about/</loc>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/members/brian_deemy/</loc>
+    <loc>http://the-fool.github.io/rac/public/members/brian_deemy/</loc>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/members/julie_gautier_downes/</loc>
+    <loc>http://the-fool.github.io/rac/public/members/julie_gautier_downes/</loc>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/categories/</loc>
+    <loc>http://the-fool.github.io/rac/public/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/members/</loc>
+    <loc>http://the-fool.github.io/rac/public/members/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://the-fool.github.io/rac/tags/</loc>
+    <loc>http://the-fool.github.io/rac/public/tags/</loc>
     <priority>0</priority>
   </url>
   
