@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div id="member-gallery">
+
+  {{ range .Data.Pages }} 
+    {{ .Render "summary"}} 
+  {{ end}}
+
+</div>
+
+{{ end }}

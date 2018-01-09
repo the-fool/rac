@@ -1,0 +1,26 @@
+<nav>
+  <a class="brand" href="/">
+    RAC
+  </a>
+
+  <ul>
+    {{ range where .Site.RegularPages "Section" ""}}
+
+    <li>
+
+      <a href="{{ .Permalink }}">
+        {{ .Params.name }}
+      </a>
+
+    </li>
+
+    {{ end }}
+
+    <li>
+      <a href="/members">
+        Current Members
+      </a>
+    </li>
+
+  </ul>
+</nav>
