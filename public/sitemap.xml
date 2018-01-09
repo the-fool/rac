@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://the-fool.github.io/rac/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>http://the-fool.github.io/rac/about/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/members/brian_deemy/</loc>
+    <loc>http://the-fool.github.io/rac/members/brian_deemy/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/members/julie_gautier_downes/</loc>
+    <loc>http://the-fool.github.io/rac/members/julie_gautier_downes/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://the-fool.github.io/rac/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/members/</loc>
+    <loc>http://the-fool.github.io/rac/members/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://the-fool.github.io/rac/tags/</loc>
     <priority>0</priority>
   </url>
   
