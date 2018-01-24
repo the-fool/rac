@@ -45,7 +45,17 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  #overlay {
+  background: $white;
+
+  #open-button {
+    svg {
+      height: 1.2rem;
+    }
+  }
+  #nav-items-large {
+    display: none;
+  }
+  #nav-overlay {
     display: none;
     height: 100%;
     width: 100%;
@@ -61,11 +71,18 @@ nav {
     background-color: rgba(0, 0, 0, 0.9);
     /* Disable horizontal scroll */
     overflow-x: hidden;
+    &.show {
+      display: block;
+    }
     #close-button {
       position: absolute;
-      top: 20px;
-      right: 45px;
+      top: $navbar-padding-y;
+      right: $navbar-padding-x;
       font-size: 60px;
+      line-height:30px;
+      &:hover {
+          text-decoration: none;
+      }
     }
     #overlay-content {
       position: relative;
@@ -73,6 +90,17 @@ nav {
       width: 100%;
       text-align: center;
       margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+  nav {
+    #open-button {
+      display: none;
+    }
+    #nav-items-large {
+      display: block;
     }
   }
 }
