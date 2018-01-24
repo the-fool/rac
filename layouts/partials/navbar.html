@@ -3,24 +3,59 @@
     RAC
   </a>
 
-  <ul>
-    {{ range where .Site.RegularPages "Section" ""}}
+  <a href="javascript:void(0)" id="open-button" onclick="opennav()">O</a>
 
-    <li>
+  <div id="nav-items-large">
+    <ul>
+      {{ range where .Site.RegularPages "Section" ""}}
 
-      <a href="{{ .Permalink }}">
-        {{ .Params.name }}
-      </a>
+      <li>
 
-    </li>
+        <a href="{{ .Permalink }}">
+          {{ .Params.linkName }}
+        </a>
 
-    {{ end }}
+      </li>
 
-    <li>
-      <a href="{{ .Site.BaseURL }}/members">
-        Current Members
-      </a>
-    </li>
+      {{ end }}
 
-  </ul>
+
+      <li>
+        <a href="{{ .Site.BaseURL }}/members">
+          Current Members
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="nav-overlay">
+    <a href="javascript:void(0)" id="close-button" onclick="closeNav()">&times;</a>
+
+    <div id="overlay-content">
+      <ul>
+        {{ range where .Site.RegularPages "Section" ""}}
+
+        <li>
+
+          <a href="{{ .Permalink }}">
+            {{ .Params.linkName }}
+          </a>
+
+        </li>
+
+        {{ end }}
+
+
+        <li>
+          <a href="{{ .Site.BaseURL }}/members">
+            Current Members
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+
 </nav>

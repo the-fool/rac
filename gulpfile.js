@@ -1,7 +1,9 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const babel = require('gulp-babel');
+require('babel-preset-env');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', () => {
@@ -14,6 +16,21 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./static/_build/'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./static/**/*.scss', ['sass']);
+gulp.task('js', function () {
+  gulp.src(['./static/scripts/**/*.js'])
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(gulp.dest('./static/_build/'));
 });
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./static/styles/*.scss', ['sass']);
+});
+
+
+gulp.task('js:watch', function () {
+  gulp.watch('./static/scripts/*.js', ['js']);
+});
+
+gulp.task('watch', ['js:watch', 'sass:watch']);

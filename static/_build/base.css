@@ -274,7 +274,13 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-*, *:before, *:after {
+body.noscroll {
+  overflow-y: scroll;
+  position: fixed; }
+
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
@@ -286,6 +292,51 @@ img,
 video {
   max-width: 100%;
   vertical-align: middle; }
+
+/**
+
+  Navbar
+
+  **/
+nav {
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  nav #overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    /* Stay in place */
+    position: fixed;
+    /* Sit on top */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    /* Black fallback color */
+    background-color: black;
+    /* Black w/opacity */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Disable horizontal scroll */
+    overflow-x: hidden; }
+    nav #overlay #close-button {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px; }
+    nav #overlay #overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px; }
 
 #member-gallery {
   display: -webkit-box;
