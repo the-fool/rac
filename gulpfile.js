@@ -5,13 +5,13 @@ var sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', () => {
-  return gulp.src('./static/**/*.scss')
+  return gulp.src('./static/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest('./static'));
+    .pipe(gulp.dest('./static/_build/'));
 });
 
 gulp.task('sass:watch', function () {
