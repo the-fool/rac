@@ -1,4 +1,11 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}_build/home.css">
+{{ end }}
+
 {{ define "main" }}
-<div class="container">RAC</div>
+
+{{ partial "home/banner.html" . }}
+
+{{ partial "home/about.html" . }}
 
 {{ end }}

@@ -1,0 +1,41 @@
+@import 'variables';
+
+$small-h1-font-size: $h1-font-size * 0.7;
+
+
+#banner {
+  position: relative;
+  font-size: 10px;
+
+  img {
+    height: auto;
+  }
+  h1 {
+    font-size: 2em;
+    position: absolute;
+    padding: 0.7em;
+    bottom: 0.3em;
+    left: 2rem;
+    max-width: 70%;
+    line-height: 3em;
+    min-width: 200px;
+    span {
+      box-shadow: 1rem 0 0 $primary, -1rem 0 0 $primary;
+      padding: 0.7em 0;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      font-size: $font-size-base;
+  }
+
+}
+
+#about {
+  background-color: $black;
+  padding: 2rem 0;
+  p {
+    color: $white;
+  }
+}
