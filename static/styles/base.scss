@@ -36,24 +36,81 @@ video {
 
 /**
 
+  Size-hiders
+
+**/
+
+.lg-only {
+  display: none;
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+  .lg-only {
+    display: block;
+  }
+}
+
+
+/**
+
+  List helper
+
+**/
+
+ul.blank {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/**
+  Buttons
+
+**/
+
+.btn {
+  padding: 1rem 1.5rem;
+  display: block;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  text-align: center;
+
+  &.btn-bold {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+
+/**
+
   Navbar
 
-  **/
+**/
 
 nav {
   padding: $navbar-padding-y $navbar-padding-x;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background: $white;
-
   #open-button {
     svg {
       height: 1.2rem;
     }
   }
   #nav-items-large {
-    display: none;
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        margin: 0 1rem;
+      }
+    }
   }
   #nav-overlay {
     display: none;
@@ -79,9 +136,9 @@ nav {
       top: $navbar-padding-y;
       right: $navbar-padding-x;
       font-size: 60px;
-      line-height:30px;
+      line-height: 30px;
       &:hover {
-          text-decoration: none;
+        text-decoration: none;
       }
     }
     #overlay-content {
@@ -98,9 +155,6 @@ nav {
   nav {
     #open-button {
       display: none;
-    }
-    #nav-items-large {
-      display: block;
     }
   }
 }
