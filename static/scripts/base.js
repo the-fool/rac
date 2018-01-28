@@ -1,4 +1,4 @@
-const overlay = document.getElementById('overlay');
+const overlay = document.getElementById('nav-overlay');
 const openNavButton = document.getElementById('open-button');
 const closeNavButton = document.getElementById('close-button');
 
@@ -9,3 +9,5 @@ function opennav() {
 function closenav() {
     overlay.classList.remove('show');
 }
+
+$('#nav-overlay a').click(closenav);

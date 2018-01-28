@@ -225,6 +225,19 @@ nav {
   }
 }
 
+
+// Section stuff
+
+section {
+  .section-title {
+    text-align: center;
+    color: $white;
+    padding: 2em 0;
+    background-color: #0f1010;
+    margin-bottom: 0;
+  }
+}
+
 footer {
   background-color: $black;
   .container {

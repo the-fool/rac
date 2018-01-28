@@ -1,5 +1,6 @@
 {{ define "styles" }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}_build/home.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}_build/members.css">
 {{ end }}
 
 {{ define "main" }}
@@ -8,4 +9,5 @@
 
 {{ partial "home/about.html" . }}
 
+{{ partial "members.html" . }}
 {{ end }}

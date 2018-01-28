@@ -1,0 +1,18 @@
+<section id="members">
+  <h3 class="section-title">Current Members</h3>
+  <div class="member-grid">
+
+    {{ range where .Site.RegularPages "Section" "members" }}
+
+    <article class="member-tile">
+      <img src="{{ .Params.thumbnail | relURL }}">
+      <div class="details">
+        <span class="name">{{ .Params.name }} </span>
+        <a href="{{ .Permalink }}">Profile</a>
+        <a href="{{ .Params.external }}">Portfolio</a>
+      </div>
+    </article>
+    {{ end }}
+
+  </div>
+</section>
