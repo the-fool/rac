@@ -188,14 +188,22 @@ nav {
     z-index: 1;
     left: 0;
     top: 0;
-    /* Black fallback color */
-    background-color: rgb(0, 0, 0);
     /* Black w/opacity */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0);
     /* Disable horizontal scroll */
     overflow-x: hidden;
     &.show {
       display: block;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+        }
+      }
     }
     #close-button {
       position: absolute;
@@ -225,9 +233,7 @@ nav {
   }
 }
 
-
 // Section stuff
-
 section {
   .section-title {
     text-align: center;
@@ -246,19 +252,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: $white;
-
   }
   #social-media {
     ul {
       display: flex;
       flex-direction: row;
-
       li {
         margin-right: 1rem;
       }
     }
   }
-
   #email {
     font-size: 0.7em;
   }
