@@ -1,24 +1,34 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL}}_build/member-single.css">
+{{ end }}
+
 {{ define "main" }}
 <article>
-  <header>
+<header>
 
-    <img src="{{ .Site.BaseURL }}{{ .Params.profile }}">
+  <img src="{{ .Site.BaseURL }}{{ .Params.profile }}">
 
-    <h1>
-      {{ .Params.name }}
-    </h1>
+  <h1>
+    {{ .Params.name }}
+  </h1>
 
-    {{ range .Params.links }}
+  {{ range .Params.links }}
 
-    <a href="{{ .url }}">
-      {{ .name }}
-    </a>
+  <div>
 
-    {{ end }}
+  <a href="{{ .url }}">
+    {{ .name }}
+  </a>
 
-  </header>
+  </div>
+  {{ end }}
+
+</header>
+
+<div class="content-wrapper">
 
   {{ .Content }}
+</div>
 
 </article>
 

@@ -1,7 +1,7 @@
 const $memberTiles = $('.member-tile');
 $memberTiles.hover(showDetails);
 $memberTiles.click(showDetails);
-
+$memberTiles.mouseout(() => $memberTiles.removeClass('show'));
 function showDetails() {
   const el$ = $(this);
 

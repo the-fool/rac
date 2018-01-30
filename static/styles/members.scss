@@ -22,8 +22,6 @@
       padding: 0 0.5em;
       transition: opacity 0.3s ease;
       top: 0;
-      // i cannot figure out a non-hacky way to make the links un-clickable while invisible without too much js, or losing my slick transition
-      left: -10000;
       width: 100%;
       height: 100%;
       flex-direction: column;
@@ -39,10 +37,8 @@
         text-decoration: none;
       }
     }
-    &.show,
-    &:hover {
+    &.show {
       .details {
-        left: 0;
         opacity: 1;
       }
     }
