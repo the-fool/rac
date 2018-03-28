@@ -1,35 +1,37 @@
 {{ define "styles" }}
-<link rel="stylesheet" href="{{ .Site.BaseURL}}_build/member-single.css">
-{{ end }}
 
-{{ define "main" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL}}_build/member-single.css"> {{ end }} {{ define "main" }}
+
 <article>
-<header>
+  <header>
+    <figure>
+      <img src="{{ .Site.BaseURL }}{{ .Params.profile }}">
+    </figure>
+  </header>
 
-  <img src="{{ .Site.BaseURL }}{{ .Params.profile }}">
+  <div class="content-wrapper">
+    <div class="content-inner">
 
-  <h1>
-    {{ .Params.name }}
-  </h1>
+      <h1>
+        {{ .Params.name }}
+      </h1>
 
-  {{ range .Params.links }}
+      {{ .Content }} 
+      
+      <!-- Links -->
+      {{ range .Params.links }}
 
-  <div>
+      <div>
 
-  <a href="{{ .url }}">
-    {{ .name }}
-  </a>
+        <a href="{{ .url }}">
+          {{ .name }}
+        </a>
+
+      </div>
+      {{ end }}
+    </div>
 
   </div>
-  {{ end }}
-
-</header>
-
-<div class="content-wrapper">
-
-  {{ .Content }}
-</div>
-
 </article>
 
 {{ end }}

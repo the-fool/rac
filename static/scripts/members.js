@@ -1,7 +1,5 @@
 const $memberTiles = $('.member-tile');
-$memberTiles.hover(showDetails);
-$memberTiles.click(showDetails);
-$memberTiles.mouseout(() => $memberTiles.removeClass('show'));
+
 function showDetails() {
   const el$ = $(this);
 
@@ -12,12 +10,22 @@ function showDetails() {
   }
 
   // temporarily nil the anchor href
-  el$.find('a').each(function() {
+  el$.find('a').each(function () {
     const a$ = $(this);
     const trueHref = a$.attr('href');
     a$.attr('href', 'javascript:void(0)');
     setTimeout(() => a$.attr('href', trueHref), 10);
   });
-  
+
   el$.addClass('show');
+}
+
+$(function () {
+  //setUpTiles();
+});
+
+function setUpTiles() {
+  $memberTiles.hover(showDetails);
+  $memberTiles.click(showDetails);
+  $memberTiles.mouseout(() => $memberTiles.removeClass('show'));
 }

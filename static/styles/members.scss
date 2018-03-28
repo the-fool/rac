@@ -10,16 +10,15 @@
   flex-wrap: wrap;
   .member-tile {
     position: relative;
-    flex-basis: 50%;
     img {
       filter: grayscale(100%);
     }
     .details {
       position: absolute;
       display: flex;
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
+      opacity: 1;
       padding: 0 0.5em;
+      background: rgba(0, 0, 0, 0.5);
       transition: opacity 0.3s ease;
       top: 0;
       width: 100%;
@@ -37,9 +36,17 @@
         text-decoration: none;
       }
     }
-    &.show {
+    @media screen and (min-width: 500px) {
+      flex-basis: 50%;
+    }
+    @media screen and (min-width: 700px) {
       .details {
-        opacity: 1;
+        opacity: 0;
+      }
+      &:hover {
+        .details {
+          opacity: 1;
+        }
       }
     }
   }
