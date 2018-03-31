@@ -1,5 +1,5 @@
 +++
-name="Bry Bry"
+name="Brian Deemy"
 thumbnail="/brian_deemy/thumbnail.jpg"
 external="http://www.briandeemy.com/"
 external_name="Portfolio"
