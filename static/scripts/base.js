@@ -14,18 +14,10 @@ function closenav() {
 
 $(function () {
     setUpNav();
+    const nabber = instanab('racspokane');
+    nabber.run();
 });
 
 function setUpNav() {
     $('#nav-overlay a').click(closenav);
-}
-
-function setUpInstafeed() {
-
-    var feed = new Instafeed({
-        get: 'user',
-        userId: 'thomas.ruble',
-        clientId: INSTA_ID
-    });
-    feed.run();
 }

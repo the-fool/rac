@@ -17,7 +17,7 @@ body.noscroll {
 }
 
 main {
-  margin-bottom: 3rem;
+  //margin-bottom: 3rem;
 }
 
 *,
@@ -36,7 +36,6 @@ video {
   vertical-align: middle;
 }
 
-
 /**
 
   Layout classes
@@ -48,7 +47,6 @@ video {
   max-width: 1300px;
   margin: auto;
 }
-
 
 /**
 
@@ -105,7 +103,6 @@ h6,
   font-size: $h6-font-size;
 }
 
-
 /**
 
   Size-hiders
@@ -122,7 +119,6 @@ h6,
   }
 }
 
-
 /**
 
   List helper
@@ -134,7 +130,6 @@ ul.blank {
   padding: 0;
   margin: 0;
 }
-
 
 /**
   Buttons
@@ -149,12 +144,40 @@ ul.blank {
   font-weight: 500;
   line-height: 1.25rem;
   text-align: center;
+  text-transform: uppercase;
   &.btn-bold {
     background-color: $black;
-    color: $white;
+    color: $white !important;
+  }
+  &.btn-white {
+    background-color: $white;
+    color: $black !important;
   }
 }
 
+/**
+
+  Forms
+
+**/
+
+form {
+  .form-group {
+    margin-bottom: 1rem;
+    input {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      border: $input-border-width solid $input-border-color;
+      box-shadow: $input-box-shadow;
+      background-color: $white;
+      outline: 0;
+      padding: $input-padding-y $input-padding-x;
+      line-height: $input-line-height;
+      height: $input-height;
+    }
+  }
+}
 
 /**
 
@@ -206,7 +229,6 @@ nav {
       li {
         list-style: none;
         margin: 1em 0;
-        
         a {
           text-decoration: none;
         }
@@ -250,29 +272,95 @@ section {
   }
 }
 
+/*
+
+
+Footer
+
+
+*/
+
 footer {
-  padding: 1rem;
+  //padding: 1rem;
   background-color: $gray-900;
-  .container {
+  #bottom {
+    padding: 1em 0;
+    background-color: black;
+    color: $gray-100;
+  }
+  #main-footer {
+    padding: 5em 0em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     color: $white;
   }
-  #social-media {
-    ul {
-      display: flex;
-      flex-direction: row;
-      li {
-        margin-right: 1rem;
+  >* {
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  #insta {
+    flex: 3;
+    padding-right: 3rem;
+  }
+  #links {
+    flex: 2;
+    #social-media {
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          margin-right: 1rem;
+        }
+      }
+    }
+    #emails {
+      font-size: 1em;
+    }
+
+    #address, #emails, #social-media {
+      margin-top: 1rem;
+    }
+  }
+  #contact {
+    flex: 2;
+    form {
+      max-width: 14em;
+      #submit {
+        max-width: 10em;
       }
     }
   }
-  #email {
-    font-size: 0.7em;
-  }
   svg * {
     fill: white;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    #main-footer {
+      flex-direction: row;
+    }
+  }
+}
+
+#instanab {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    width: 6em;
+    margin-right: 0.7em;
+    margin-bottom: 0.7em;
+    flex: 1 1 20%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+
+      &:hover {
+        filter: brightness(40%);
+      }
+    }
   }
 }
